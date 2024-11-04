@@ -1,12 +1,11 @@
 {
-  "healthchecks": {
-    "web": [
-      {
-        "content": "python/flask",
-        "name": "check-1",
-        "path": "/",
-        "type": "startup"
-      }
-    ]
+  "healthcheck": {
+    "web": {
+      "type": "http",
+      "path": "/",
+      "interval": 10,
+      "timeout": 5,
+      "retries": 3
+    }
   }
 }
